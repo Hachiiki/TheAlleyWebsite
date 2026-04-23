@@ -81,11 +81,15 @@
 
                 <!-- State 3: Authenticated -->
                 <div id="auth-profile" class="auth-state">
-                    <div class="profile-card">
-                        <img id="user-avatar" src="" alt="Avatar" class="profile-avatar">
-                        <div class="profile-info">
-                            <h3 id="user-global-name" class="profile-name"></h3>
-                            <p id="user-username" class="profile-tag"></p>
+                    <div class="auth-status-details">
+                        <div class="auth-avatar-ring">
+                            <img id="user-avatar" src="" alt="Avatar" class="profile-avatar-clean">
+                        </div>
+                        <div class="auth-user-text">
+                            <h3 id="user-global-name" class="profile-name-clean"></h3>
+                            <p class="auth-detail-line">Alias: <span id="user-username" class="status-verified"></span></p>
+                            <p class="auth-detail-line">Connection: <span class="status-verified">Harmonized</span></p>
+                            <p class="auth-detail-line">Clearance: <span class="status-granted">Granted</span></p>
                         </div>
                     </div>
                     <p class="auth-success-msg">Your identity is verified. You may now access the guild's commands.</p>

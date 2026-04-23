@@ -1,0 +1,182 @@
+/* Auth specific styles extending styles.css */
+
+#auth-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.auth-box {
+    background: rgba(15, 15, 18, 0.7);
+    border: 1px solid rgba(196, 181, 253, 0.2);
+    border-radius: 4px;
+    padding: 3rem 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(124, 58, 237, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(196, 181, 253, 0.5), transparent);
+}
+
+.auth-rune {
+    font-size: 2rem;
+    color: #c4b5fd;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.auth-desc {
+    color: #a0a0a0;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.auth-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.auth-state.active {
+    display: flex;
+}
+
+.btn-discord {
+    background: #5865F2;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+}
+
+.btn-discord:hover {
+    background: #4752C4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
+}
+
+.discord-icon {
+    width: 24px;
+    height: auto;
+}
+
+.auth-secure-hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.mini-loader {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(196, 181, 253, 0.2);
+    border-top-color: #c4b5fd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+/* User Profile Card */
+.profile-card {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(196, 181, 253, 0.3);
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #5865F2;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-name {
+    margin: 0;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+}
+
+.profile-tag {
+    margin: 0;
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+.auth-success-msg {
+    color: #4a9e4a;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.error-msg {
+    color: #e53e3e;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid rgba(229, 62, 62, 0.5);
+    color: #fc8181;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 3px;
+}
+
+.btn-logout:hover {
+    background: rgba(229, 62, 62, 0.1);
+    color: #e53e3e;
+    border-color: #e53e3e;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

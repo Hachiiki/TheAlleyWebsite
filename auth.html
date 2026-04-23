@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAlleySMP — Authentication</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="magic-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+            <div class="loading-text">Weaving Magic...</div>
+            <div class="loading-bar-wrap">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reusing the exact hero background structure for aesthetic continuity -->
+    <div class="hero-bg">
+        <div class="hero-slide slide-1"></div>
+        <div class="hero-slide slide-2" style="opacity:0"></div>
+        <div class="hero-slide slide-3" style="opacity:0"></div>
+        <div class="particles-container">
+            <div class="particle" style="left: 5%; --drift: 15px; animation: floatUp 8s ease-in-out 0s infinite;"></div>
+            <div class="particle" style="left: 12%; --drift: -20px; animation: floatUp 9s ease-in-out 1s infinite;"></div>
+            <div class="particle" style="left: 20%; --drift: 10px; animation: floatUp 7.5s ease-in-out 2s infinite;"></div>
+            <div class="particle" style="left: 28%; --drift: -15px; animation: floatUp 10s ease-in-out 0.5s infinite;"></div>
+            <div class="particle" style="left: 35%; --drift: 20px; animation: floatUp 8.5s ease-in-out 1.5s infinite;"></div>
+            <div class="particle" style="left: 50%; --drift: 12px; animation: floatUp 7s ease-in-out 1s infinite;"></div>
+            <div class="particle" style="left: 80%; --drift: 16px; animation: floatUp 7.5s ease-in-out 2.5s infinite;"></div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <nav>
+            <div class="nav-logo">TheAlleySMP</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Return Home</a></li>
+            </ul>
+        </nav>
+
+        <section id="auth-section">
+            <div class="auth-box reveal">
+                <div class="magic-diamond" style="margin: 0 auto 2rem auto;">
+                    <div class="feat-icon-wrap" style="background: rgba(0,0,0,0.5);">
+                        <div class="auth-rune">⎔</div>
+                    </div>
+                </div>
+                
+                <h2 class="section-title">Gateway of Identity</h2>
+                <p class="auth-desc" id="auth-status-text">To forge your story, you must first reveal your true name. Connect your Discord account to sync your progress.</p>
+                
+                <!-- State 1: Loading / Checking status -->
+                <div id="auth-loading" class="auth-state active">
+                    <div class="mini-loader"></div>
+                    <p>Consulting the archives...</p>
+                </div>
+
+                <!-- State 2: Unauthenticated (Needs Login) -->
+                <div id="auth-login" class="auth-state">
+                    <button class="btn-discord" onclick="window.location.href='http://localhost:3000/auth/login'">
+                        <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" class="discord-icon">
+                        Login with Discord
+                    </button>
+                    <p class="auth-secure-hint">✦ Secure authentication via Discord ✦</p>
+                </div>
+
+                <!-- State 3: Authenticated -->
+                <div id="auth-profile" class="auth-state">
+                    <div class="profile-card">
+                        <img id="user-avatar" src="" alt="Avatar" class="profile-avatar">
+                        <div class="profile-info">
+                            <h3 id="user-global-name" class="profile-name"></h3>
+                            <p id="user-username" class="profile-tag"></p>
+                        </div>
+                    </div>
+                    <p class="auth-success-msg">Your identity is verified. You may now access the guild's commands.</p>
+                    <button class="btn-logout" onclick="logout()">Sever Connection</button>
+                </div>
+                
+                <!-- State 4: Error -->
+                <div id="auth-error" class="auth-state">
+                    <p class="error-msg">The connection was severed. The magic fizzled.</p>
+                    <button class="btn-discord" onclick="window.location.href='http://localhost:3000/auth/login'">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer style="margin-top: 0; padding-top: 2rem;">
+            <div class="footer-logo">TheAlleySMP</div>
+            <p class="footer-copy">© 2026 TheAlleySMP &nbsp;·&nbsp; All rights reserved</p>
+        </footer>
+
+    </div>
+
+    <!-- We reuse the core preloader/reveal system, but add auth logic -->
+    <script src="auth.js"></script>
+</body>
+</html>

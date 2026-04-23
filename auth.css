@@ -73,8 +73,21 @@
 .discord-icon {
     width: 24px;
     height: auto;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    all: revert !important;
+}
+
+.btn-discord img {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    all: revert !important;
+}
+
+.btn-discord {
+    background: #5865F2 !important;
 }
 
 .btn-discord img {

@@ -73,8 +73,14 @@
 .discord-icon {
     width: 24px;
     height: auto;
-    opacity: 1;
-    filter: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-discord img {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .auth-secure-hint {

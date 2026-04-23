@@ -1,158 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join TheAlleySMP - A semi-vanilla survival RPG Minecraft server with immersive lore and community.">
-    <title>TheAlleySMP | Home</title>
-
+    <title>TheAlleySMP — Forge Your Story</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="nav-left">
-            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="brand">TheAlleySMP</div>
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="magic-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+            <div class="loading-text">Forging Your Story...</div>
+            <div class="loading-bar-wrap">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-bg">
+        <div class="hero-slide slide-1"></div>
+        <div class="hero-slide slide-2"></div>
+        <div class="hero-slide slide-3"></div>
+        <div class="particles-container">
+            <div class="particle" style="left: 5%; --drift: 15px; animation: floatUp 8s ease-in-out 0s infinite;"></div>
+            <div class="particle" style="left: 12%; --drift: -20px; animation: floatUp 9s ease-in-out 1s infinite;"></div>
+            <div class="particle" style="left: 20%; --drift: 10px; animation: floatUp 7.5s ease-in-out 2s infinite;"></div>
+            <div class="particle" style="left: 28%; --drift: -15px; animation: floatUp 10s ease-in-out 0.5s infinite;"></div>
+            <div class="particle" style="left: 35%; --drift: 20px; animation: floatUp 8.5s ease-in-out 1.5s infinite;"></div>
+            <div class="particle" style="left: 42%; --drift: -10px; animation: floatUp 9.5s ease-in-out 2.5s infinite;"></div>
+            <div class="particle" style="left: 50%; --drift: 12px; animation: floatUp 7s ease-in-out 1s infinite;"></div>
+            <div class="particle" style="left: 58%; --drift: -18px; animation: floatUp 10.5s ease-in-out 0s infinite;"></div>
+            <div class="particle" style="left: 65%; --drift: 8px; animation: floatUp 8s ease-in-out 2s infinite;"></div>
+            <div class="particle" style="left: 72%; --drift: -12px; animation: floatUp 9s ease-in-out 1.5s infinite;"></div>
+            <div class="particle" style="left: 80%; --drift: 16px; animation: floatUp 7.5s ease-in-out 2.5s infinite;"></div>
+            <div class="particle" style="left: 88%; --drift: -14px; animation: floatUp 9.5s ease-in-out 0.5s infinite;"></div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <nav>
+            <div class="nav-logo">TheAlleySMP</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#server-details">Connect</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </nav>
+
+        <section id="hero">
+            <p class="hero-eyebrow">✦ &nbsp; A Lore-Driven Survival Experience &nbsp; ✦</p>
+            <p class="hero-welcome">Welcome to</p>
+            <h1 class="hero-title">TheAlleySMP</h1>
+            <p class="hero-sub">Forge your story.&ensp;Survive the chaos.</p>
+            <div class="hero-cta">
+                <a href="#server-details" class="btn-join">Join the Server</a>
+            </div>
+            <div class="scroll-hint">
+                <span class="scroll-label">Scroll</span>
+                <div class="scroll-bar"></div>
+            </div>
+        </section>
+
+        <div class="magic-divider">
+            <span class="magic-divider-star">✦</span>
         </div>
 
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="Store.html">Store</a>
-            <a href="#">Rules</a>
-            <a href="staff.html">Staff</a>
+        <section id="about" class="section-fade">
+            <div class="about-bg-glow-1"></div>
+            <div class="section-inner">
+
+                <div class="about-text reveal">
+                    <div class="section-badge">About Us</div>
+                    <h2 class="section-title">The Alley SMP</h2>
+
+                    <p>The Alley SMP is a semi-vanilla survival RPG server shaped entirely by lore. Face chaos, forge your path, and reclaim The Alley in this highly immersive Minecraft experience.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✦</span>
+                            <span>Rich, Player-Driven Storytelling</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✦</span>
+                            <span>Thriving, Welcoming Community</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✦</span>
+                            <span>Unforgettable Epic Adventures</span>
+                        </div>
+                    </div>
+
+                    <p>Founded with a pure passion for world-building, we meticulously blend classic survival gameplay with deep role-playing mechanics to create a truly living, breathing realm.</p>
+                </div>
+
+                <div class="about-canvas-wrap reveal" style="transition-delay:0.2s">
+                    <div class="image-frame">
+                        <img id="diorama-image" src="./images/character.png" alt="The Alley SMP Character">
+                        <div class="floating-runes">
+                            <span class="rune rune-1">⟁</span>
+                            <span class="rune rune-2">⎊</span>
+                            <span class="rune rune-3">⍙</span>
+                            <span class="rune rune-4">⎔</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="magic-divider">
+            <span class="magic-divider-star">✦</span>
         </div>
 
-        <div class="nav-right">
-            <a href="https://discord.gg/thealleysmp" target="_blank" class="discord-link" aria-label="Join Discord">
-                <i class="fab fa-discord"></i>
-            </a>
+        <section id="server-details" class="section-fade">
+            <div class="server-bg-glow-1"></div>
 
-            <button class="profile-btn" aria-label="Profile">
-                <i class="fas fa-user"></i>
-            </button>
+            <div class="details-container reveal">
+                <div class="section-badge" style="justify-content:center; display:flex;">Connection</div>
+                <h2 class="section-title" style="text-align: center;">Gateway to The Alley</h2>
+
+
+                <!-- Connection Info Strips -->
+                <div class="connection-strips">
+                    <div class="conn-strip interactive" onclick="copyIP('thealleysmp.com', this)">
+                        <span class="strip-icon">⟁</span>
+                        <span class="strip-label">Java Edition</span>
+                        <span class="strip-val">thealleysmp.com</span>
+                        <span class="strip-hint">Click to Copy</span>
+                    </div>
+
+                    <div class="conn-strip interactive" onclick="copyIP('thealleysmp.com:19132', this)">
+                        <span class="strip-icon">⎊</span>
+                        <span class="strip-label">Bedrock Edition</span>
+                        <span class="strip-val">thealleysmp.com:19132</span>
+                        <span class="strip-hint">Click to Copy</span>
+                    </div>
+
+                    <div class="conn-strip">
+                        <span class="strip-icon">⍙</span>
+                        <span class="strip-label">Versions</span>
+                        <span class="strip-val">Java & Bedrock Native</span>
+                        <span class="strip-hint">Always Updated</span>
+                    </div>
+
+                    <div class="conn-strip">
+                        <span class="strip-icon">⎔</span>
+                        <span class="strip-label">Capacity</span>
+                        <span class="strip-val">500 Wanderers</span>
+                        <span class="strip-hint">Lag-Free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="magic-divider">
+            <span class="magic-divider-star">✦</span>
         </div>
-    </nav>
-</header>
 
-<aside class="sidebar" id="sidebar">
-    <button class="close-btn" id="closeBtn" aria-label="Close Menu">&times;</button>
-    <nav class="sidebar-links">
-        <a href="#">Seasons</a>
-        <a href="#">Announcements</a>
-        <a href="#">Apply</a>
-    </nav>
-</aside>
+        <section id="features" class="section-fade">
+            <div class="section-inner">
+                
+                <div class="features-header reveal">
+                    <div class="section-badge" style="justify-content:center">What Awaits</div>
+                    <h2 class="section-title">The Alley's Calling</h2>
+                </div>
 
-<main>
+                <div class="features-timeline">
+                    <!-- The glowing center path -->
+                    <div class="timeline-thread"></div>
 
-<section class="hero-section">
-    <div class="hero-overlay">
-        <h1>Welcome to TheAlleySMP</h1>
-        <p>Forge your story. Survive the chaos.</p>
-    </div>
-</section>
+                    <!-- Feature 1 -->
+                    <div class="feat-node reveal">
+                        <div class="timeline-marker"><div class="marker-core"></div></div>
+                        <div class="feat-visual">
+                            <div class="magic-diamond">
+                                <div class="feat-icon-wrap">
+                                    <div class="feat-icon" id="icon-survival"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-text">
+                            <span class="feat-tag">Core Pillar</span>
+                            <h3 class="feat-name">Survival Gameplay</h3>
+                            <p class="feat-desc">Classic Minecraft survival enriched with highly challenging mechanics and meaningful progression. Gather your strength, build your stronghold, and conquer the sprawling wilderness.</p>
+                        </div>
+                    </div>
 
-<section>
-    <h2 class="section-title">Latest Announcements</h2>
+                    <!-- Feature 2 -->
+                    <div class="feat-node reveal">
+                        <div class="timeline-marker"><div class="marker-core"></div></div>
+                        <div class="feat-visual">
+                            <div class="magic-diamond">
+                                <div class="feat-icon-wrap">
+                                    <div class="feat-icon" id="icon-rpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-text">
+                            <span class="feat-tag">Character Growth</span>
+                            <h3 class="feat-name">RPG Elements</h3>
+                            <p class="feat-desc">Level up your skills, unlock powerful and unique abilities, and organically grow your character through deep role-playing systems specifically designed to reward your distinct playstyle.</p>
+                        </div>
+                    </div>
 
-    <div class="announcement-grid">
+                    <!-- Feature 3 -->
+                    <div class="feat-node reveal">
+                        <div class="timeline-marker"><div class="marker-core"></div></div>
+                        <div class="feat-visual">
+                            <div class="magic-diamond">
+                                <div class="feat-icon-wrap">
+                                    <div class="feat-icon" id="icon-lore"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-text">
+                            <span class="feat-tag">Living Story</span>
+                            <h3 class="feat-name">Lore-Driven World</h3>
+                            <p class="feat-desc">Every shadowed corner of The Alley holds dormant secrets. Uncover a rich narrative that actively shapes the environment, the gameplay mechanics, and your ultimate destiny.</p>
+                        </div>
+                    </div>
 
-        <a href="Store.html" class="category-card cosmetics">
-            <div class="card-content">
-                <h3>Cosmetics</h3>
-                <p>Stand out with trails, hats, and wings!</p>
+                    <!-- Feature 4 -->
+                    <div class="feat-node reveal">
+                        <div class="timeline-marker"><div class="marker-core"></div></div>
+                        <div class="feat-visual">
+                            <div class="magic-diamond">
+                                <div class="feat-icon-wrap">
+                                    <div class="feat-icon" id="icon-events"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-text">
+                            <span class="feat-tag">United Front</span>
+                            <h3 class="feat-name">Community Events</h3>
+                            <p class="feat-desc">Engage in epic seasonal events, server-wide collaborative quests, and intensely player-driven storylines that bring our welcoming community together as allies—or foes.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </a>
+        </section>
 
-        <a href="Store.html" class="category-card ranks">
-            <div class="card-content">
-                <h3>Ranks</h3>
-                <p>Unlock perks and support the server!</p>
-            </div>
-        </a>
-
-        <a href="#" class="category-card events">
-            <div class="card-content">
-                <h3>Events</h3>
-                <p>Join events and win amazing prizes!</p>
-            </div>
-        </a>
+        <footer>
+            <div class="footer-logo">TheAlleySMP</div>
+            <p class="footer-tag">Come and Join us! Let's build your own story.</p>
+            <p class="footer-copy">© 2026 TheAlleySMP &nbsp;·&nbsp; All rights reserved</p>
+        </footer>
 
     </div>
-</section>
 
-<section class="featured">
-    <h2 class="section-title">Featured Builds</h2>
-
-    <div class="featured-grid">
-        <article class="featured-card">
-            <img src="build1.jpg" alt="Castle of Shadows Minecraft build">
-            <h3>Castle of Shadows</h3>
-            <p>Built by ShadowKnight.</p>
-        </article>
-
-        <article class="featured-card">
-            <img src="build2.jpg" alt="Sky Fortress Minecraft build">
-            <h3>Sky Fortress</h3>
-            <p>Created by SkyMaster.</p>
-        </article>
-
-        <article class="featured-card">
-            <img src="build3.jpg" alt="Underwater City Minecraft build">
-            <h3>Underwater City</h3>
-            <p>Built by AquaArchitect.</p>
-        </article>
-    </div>
-</section>
-
-<section class="about">
-    <h2 class="section-title">About Us</h2>
-
-    <p>
-        <strong>The Alley SMP</strong> is a semi-vanilla survival RPG server shaped by lore. 
-        Face chaos, forge your path, and reclaim The Alley in this immersive Minecraft experience.
-    </p>
-
-    <p>
-        Founded with a passion for storytelling and community, we blend survival gameplay 
-        with role-playing to create unforgettable adventures.
-    </p>
-
-    <div class="server-details">
-        <h3>Server Details</h3>
-        <ul>
-            <li><strong>IP:</strong> thealleysmp.com</li>
-            <li><strong>Bedrock:</strong> thealleysmp.com:19132</li>
-            <li><strong>Version:</strong> Java & Bedrock</li>
-            <li><strong>Max Players:</strong> 500</li>
-        </ul>
+    <!-- Scroll to Top Button -->
+    <div id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span class="scroll-icon">⟁</span>
     </div>
 
-    <div class="join-info">
-        <p class="join-title">Join Now</p>
-        <p class="ip-text">thealleysmp.com</p>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="footer-btns">
-        <a href="#" class="btn">Support</a>
-    </div>
-
-    <p class="copyright">
-        &copy; 2026 TheAlleySMP. All rights reserved.
-    </p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
